@@ -96,9 +96,8 @@ class ProjectController extends Controller {
         );
         const writable = fs.createWriteStream(filePath);
         try {
-          const { port } = ctx.app.config.cluster.listen;
           await part.pipe(writable);
-          file.path = `http://39.105.108.226:${port}/files/${file.name}`;
+          file.path = `http://39.105.108.226:7002/files/${file.name}`;
           result.push(file);
           ctx.body = {
             code: 200,

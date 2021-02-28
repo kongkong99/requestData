@@ -1,5 +1,5 @@
 {
-  "name": "eggBackend",
+  "name": "request-data",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -30,10 +30,9 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-eggBackend",
+    "start": "egg-scripts start --port=7002 --daemon --title=egg-server-eggBackend",
     "stop": "egg-scripts stop --title=egg-server-eggBackend",
-    "dev": "egg-bin dev --port=7001",
-    "dev-https": "egg-bin dev --port=443 --https.key='/Users/zhaowenhao/Desktop/https-test/ca.key' --https.cert='/Users/zhaowenhao/Desktop/https-test/ca.crt'",
+    "dev": "egg-bin dev --port=7002",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
